@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import TableOfContents from '@/components/TableOfContents';
+import ShareButtons from '@/components/ShareButtons';
+import SceneMetadata from '@/components/SceneMetadata';
 
 const tocItems = [
   { id: 'setting', title: 'Setting', level: 1 },
@@ -63,13 +65,22 @@ export default function Level1Scene1() {
                 Level 1 – Scene 1: The Heist
               </motion.h2>
 
-              <div className="flex items-center gap-4 mb-8 text-ice-400">
-                <span>Last Updated: 25/11/2025</span>
-                <span>•</span>
-                <span>Author: MANOJ TIWARI RAMCHANDRA</span>
-                <span>•</span>
-                <span>Version 1.0</span>
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
+                <div className="flex items-center gap-4 text-ice-400 text-sm">
+                  <span>Author: MANOJ TIWARI RAMCHANDRA</span>
+                </div>
+                <ShareButtons
+                  title="Level 1 - Scene 1: The Heist"
+                  url="/scripts/level-1-scene-1-the-heist"
+                />
               </div>
+
+              <SceneMetadata
+                wordCount={3500}
+                readTime={15}
+                lastUpdated="2024-11-25"
+                version="1.0"
+              />
 
               {/* Setting Section */}
               <Section id="setting" title="Setting">
