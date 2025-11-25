@@ -28,14 +28,11 @@ const tocItems = [
 export default function Level1Scene1() {
   return (
     <div className="min-h-screen py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-3">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
               <Link href="/scripts">
                 <motion.button
                   whileHover={{ x: -5 }}
@@ -50,23 +47,34 @@ export default function Level1Scene1() {
 
               {/* Title */}
               <motion.h1
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="text-6xl md:text-7xl font-bold mb-4 gradient-text text-center cyber-text"
+              >
+                ASEP
+              </motion.h1>
+
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-5xl font-bold mb-2 gradient-text"
+                transition={{ delay: 0.2 }}
+                className="text-center mb-3"
               >
-                ASEP - Game Story Script
-              </motion.h1>
+                <span className="text-sm text-ice-400 tracking-widest uppercase">Game Story Script</span>
+              </motion.div>
 
               <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-3xl font-bold mb-6 text-ice-200"
+                transition={{ delay: 0.3 }}
+                className="text-4xl md:text-5xl font-bold mb-8 text-ice-100 text-center"
               >
                 Level 1 – Scene 1: The Heist
               </motion.h2>
 
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
-                <div className="flex items-center gap-4 text-ice-400 text-sm">
+              <div className="flex flex-col items-center gap-4 mb-8">
+                <div className="text-ice-400 text-sm">
                   <span>Author: MANOJ TIWARI RAMCHANDRA</span>
                 </div>
                 <ShareButtons
@@ -81,6 +89,16 @@ export default function Level1Scene1() {
                 lastUpdated="2024-11-25"
                 version="1.0"
               />
+
+              {/* Table of Contents - Inline */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="mb-8"
+              >
+                <TableOfContents items={tocItems} />
+              </motion.div>
 
               {/* Setting Section */}
               <Section id="setting" title="Setting">
@@ -713,13 +731,6 @@ export default function Level1Scene1() {
                 <p>Last Updated: 25/11/2025</p>
               </div>
             </motion.div>
-          </div>
-
-          {/* Table of Contents Sidebar */}
-          <div className="lg:col-span-1 hidden lg:block">
-            <TableOfContents items={tocItems} />
-          </div>
-        </div>
       </div>
     </div>
   );

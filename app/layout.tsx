@@ -1,12 +1,22 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Orbitron, Exo_2 } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import SnowEffect from '@/components/SnowEffect';
 import Footer from '@/components/Footer';
 import ReadingProgress from '@/components/ReadingProgress';
 
-const inter = Inter({ subsets: ['latin'] });
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  variable: '--font-orbitron',
+  display: 'swap',
+});
+
+const exo2 = Exo_2({
+  subsets: ['latin'],
+  variable: '--font-exo2',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'ASEP - Game Story Scripts',
@@ -19,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${orbitron.variable} ${exo2.variable}`}>
+      <body className={exo2.className}>
         <SnowEffect />
         <ReadingProgress />
         <Navigation />

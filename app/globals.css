@@ -81,3 +81,30 @@ code {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Futuristic font styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-orbitron), system-ui, sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+body {
+  font-family: var(--font-exo2), system-ui, sans-serif;
+}
+
+/* Enhanced text effects for futuristic look */
+.cyber-text {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 800;
+}
+
+/* Neon glow text */
+.neon-text {
+  text-shadow:
+    0 0 5px rgba(56, 189, 248, 0.8),
+    0 0 10px rgba(56, 189, 248, 0.6),
+    0 0 20px rgba(56, 189, 248, 0.4),
+    0 0 40px rgba(56, 189, 248, 0.2);
+}
