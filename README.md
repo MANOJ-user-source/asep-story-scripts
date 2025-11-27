@@ -199,4 +199,7 @@ All content and game design © Manoj Tiwari Ramchandra
 
 **Current Status:** Development server running at http://localhost:3000
 
+
+**Take a look:**https://manoj-user-source.github.io/asep-story-scripts/scripts/level-1-scene-1-the-heist
+
 Last Updated: 25/11/2025 • Version 1.0
