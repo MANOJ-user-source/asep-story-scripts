@@ -36,7 +36,11 @@ export default function ProgressiveLoader({
 
     childrenArray.forEach((_, index) => {
       const timeout = setTimeout(() => {
-        setLoadedIndices((prev) => new Set([...prev, index]));
+        setLoadedIndices((prev) => {
+          const newSet = new Set(prev);
+          newSet.add(index);
+          return newSet;
+        });
       }, delay + index * staggerDelay);
 
       timeouts.push(timeout);
@@ -45,7 +49,7 @@ export default function ProgressiveLoader({
     return () => {
       timeouts.forEach(clearTimeout);
     };
-  }, [childrenArray.length, delay, staggerDelay]);
+  }, [delay, staggerDelay]);
 
   return (
     <div className="space-y-4">
@@ -279,7 +283,11 @@ export function SectionLoader({
 
   const handleSectionVisible = (sectionId: string) => {
     if (autoLoad) {
-      setLoadedSections((prev) => new Set([...prev, sectionId]));
+      setLoadedSections((prev) => {
+        const newSet = new Set(prev);
+        newSet.add(sectionId);
+        return newSet;
+      });
     }
   };
 
