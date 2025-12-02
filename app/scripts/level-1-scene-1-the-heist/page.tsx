@@ -27,12 +27,18 @@ const tocItems = [
 
 export default function Level1Scene1() {
   return (
-    <div className="min-h-screen py-20 px-4">
-      <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
+    <div className="min-h-screen">
+      {/* Table of Contents - Now rendered at top level */}
+      <TableOfContents items={tocItems} />
+
+      <div className="max-w-7xl mx-auto lg:ml-72">
+        <div className="py-20 px-4">
+          {/* Main Content */}
+          <main>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
               <Link href="/scripts">
                 <motion.button
                   whileHover={{ x: -5 }}
@@ -86,19 +92,9 @@ export default function Level1Scene1() {
               <SceneMetadata
                 wordCount={3500}
                 readTime={15}
-                lastUpdated="2024-11-25"
+                lastUpdated="2025-11-25"
                 version="1.0"
               />
-
-              {/* Table of Contents - Inline */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="mb-8"
-              >
-                <TableOfContents items={tocItems} />
-              </motion.div>
 
               {/* Setting Section */}
               <Section id="setting" title="Setting">
@@ -572,7 +568,21 @@ export default function Level1Scene1() {
                 </Paragraph>
 
                 <Paragraph>
-                  He needs to hide.
+                  He needs to find his bike.
+                </Paragraph>
+
+                <Paragraph>
+                  He reaches into his pocket, pulling out a small key device. His fingers press the call button.
+                </Paragraph>
+
+                <CodeDisplay>SIGNAL SEARCHING... ERROR. SIGNAL INTERFERENCE DETECTED.</CodeDisplay>
+
+                <Paragraph>
+                  The device flickers red. The interference from the blast must be blocking the signal. He'll have to reach the bike manually.
+                </Paragraph>
+
+                <Paragraph>
+                  The junkyard. That's where he left it.
                 </Paragraph>
               </Section>
 
@@ -587,11 +597,19 @@ export default function Level1Scene1() {
                 </Paragraph>
 
                 <Paragraph>
-                  He slips inside, weaving between towers of scrap. Finally, he collapses behind a corroded transport shuttle, hidden from view.
+                  He slips inside, weaving between towers of scrap. His eyes scan the debris field, searching.
                 </Paragraph>
 
                 <Paragraph>
-                  His hands tremble as he pulls out the stolen data device. Still intact. Still blinking with encrypted files.
+                  There—partially hidden beneath a tarp and corrugated metal sheets—his bike.
+                </Paragraph>
+
+                <Paragraph>
+                  He pulls the covering away. The bike is intact—sleek, black, built for speed and stealth. He runs his hand along the cold metal frame, relief washing over him.
+                </Paragraph>
+
+                <Paragraph>
+                  He collapses against it for a moment, catching his breath. His hands tremble as he pulls out the stolen data device from his jacket. Still intact. Still blinking with encrypted files.
                 </Paragraph>
 
                 <Paragraph>
@@ -731,6 +749,8 @@ export default function Level1Scene1() {
                 <p>Last Updated: 25/11/2025</p>
               </div>
             </motion.div>
+          </main>
+        </div>
       </div>
     </div>
   );
@@ -739,11 +759,11 @@ export default function Level1Scene1() {
 // Component Helpers
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
-    <section id={id} className="glass rounded-xl p-8 mb-8 scroll-mt-24">
+    <section id={id} className="glass rounded-xl p-8 mb-8 scroll-mt-24 max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold mb-6 text-ice-100 border-b border-ice-700 pb-3">
         {title}
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-6">
         {children}
       </div>
     </section>
@@ -753,8 +773,8 @@ function Section({ id, title, children }: { id: string; title: string; children:
 function SubSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mt-6 pl-6 border-l-4 border-ice-600">
-      <h4 className="text-xl font-semibold mb-3 text-ice-200">{title}</h4>
-      <div className="space-y-3">
+      <h4 className="text-xl font-semibold mb-4 text-ice-200">{title}</h4>
+      <div className="space-y-4">
         {children}
       </div>
     </div>
@@ -763,7 +783,7 @@ function SubSection({ title, children }: { title: string; children: React.ReactN
 
 function Paragraph({ children, italic = false }: { children: React.ReactNode; italic?: boolean }) {
   return (
-    <p className={`text-ice-300 leading-relaxed ${italic ? 'italic text-ice-400' : ''}`}>
+    <p className={`text-ice-300 max-w-prose text-lg mb-5 story-paragraph ${italic ? 'italic text-ice-400' : ''}`}>
       {children}
     </p>
   );
@@ -771,9 +791,9 @@ function Paragraph({ children, italic = false }: { children: React.ReactNode; it
 
 function DialogueBox({ speaker, children }: { speaker: string; children: React.ReactNode }) {
   return (
-    <div className="bg-ice-900/40 border-l-4 border-ice-400 p-4 rounded my-4">
-      <div className="text-ice-200 font-semibold mb-2">{speaker}:</div>
-      <div className="text-ice-300 italic">&quot;{children}&quot;</div>
+    <div className="bg-ice-900/40 border-l-4 border-ice-400 p-5 rounded my-6 max-w-prose">
+      <div className="text-ice-200 font-semibold mb-3 text-base">{speaker}:</div>
+      <div className="text-ice-300 italic text-lg story-paragraph">&quot;{children}&quot;</div>
     </div>
   );
 }

@@ -95,7 +95,7 @@ Edit `app/scripts/page.tsx` and add to the `allScripts` array:
   title: 'Level X - Scene Y: Scene Name',
   description: 'Brief description of the scene',
   slug: 'level-x-scene-y-slug',
-  date: '2024-11-26',
+  date: '2025-11-26',
   tags: ['Level X', 'Tag1', 'Tag2'],
 }
 ```

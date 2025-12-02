@@ -5,6 +5,10 @@ import Navigation from '@/components/Navigation';
 import SnowEffect from '@/components/SnowEffect';
 import Footer from '@/components/Footer';
 import ReadingProgress from '@/components/ReadingProgress';
+import SettingsFAB from '@/components/SettingsFAB';
+import MotionToggle from '@/components/MotionToggle';
+import MotionAttributeSync from '@/components/MotionAttributeSync';
+import { MotionProvider } from '@/context/MotionContext';
 
 const orbitron = Orbitron({
   subsets: ['latin'],
@@ -31,13 +35,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${orbitron.variable} ${exo2.variable}`}>
       <body className={exo2.className}>
-        <SnowEffect />
-        <ReadingProgress />
-        <Navigation />
-        <main className="relative z-10 pt-16 min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <MotionProvider>
+          <MotionAttributeSync />
+          <SnowEffect />
+          <ReadingProgress />
+          <Navigation />
+          <SettingsFAB />
+          <MotionToggle />
+          <main className="relative z-10 pt-16 min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

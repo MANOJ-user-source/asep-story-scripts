@@ -35,8 +35,15 @@ export default function ScriptCard({
     >
       <Link href={`/scripts/${slug}`}>
         <motion.article
-          whileHover={{ scale: 1.02, y: -5 }}
-          className="glass rounded-xl p-6 h-full cursor-pointer group transition-all duration-300 hover:glow"
+          whileHover={{
+            scale: 1.03,
+            y: -8,
+            rotateX: 2,
+            rotateY: 2,
+          }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          className="glass rounded-xl p-6 h-full cursor-pointer group transition-all duration-300 hover:glow hover:shadow-2xl hover:border-ice-400"
         >
           <div className="flex flex-col h-full">
             <div className="flex items-start justify-between mb-3">
@@ -68,13 +75,17 @@ export default function ScriptCard({
             </p>
 
             <div className="flex flex-wrap gap-2 mb-4">
-              {tags.map((tag) => (
-                <span
+              {tags.map((tag, i) => (
+                <motion.span
                   key={tag}
-                  className="px-3 py-1 text-xs font-medium rounded-full bg-ice-900/40 text-ice-300 border border-ice-700"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 + i * 0.05 }}
+                  whileHover={{ scale: 1.1, backgroundColor: "rgba(56, 189, 248, 0.2)" }}
+                  className="px-3 py-1 text-xs font-medium rounded-full bg-ice-900/40 text-ice-300 border border-ice-700 group-hover:border-ice-500 transition-colors"
                 >
                   {tag}
-                </span>
+                </motion.span>
               ))}
             </div>
 

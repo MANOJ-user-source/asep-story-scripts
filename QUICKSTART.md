@@ -32,7 +32,7 @@ Edit `app/scripts/page.tsx` and add to the `allScripts` array:
   title: 'Your Script Name',
   description: 'Brief description of what it does',
   slug: 'your-script-slug',  // URL-friendly name
-  date: '2024-11-26',
+  date: '2025-11-26',
   tags: ['Tag1', 'Tag2', 'Tag3'],
 }
 ```
@@ -44,7 +44,7 @@ Edit `app/scripts/[slug]/page.tsx` and add to the `scriptsData` object:
 'your-script-slug': {
   title: 'Your Script Name',
   description: 'Full description',
-  date: '2024-11-26',
+  date: '2025-11-26',
   tags: ['Tag1', 'Tag2'],
   content: `
 ## Overview
