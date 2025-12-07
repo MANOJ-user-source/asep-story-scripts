@@ -46,6 +46,54 @@
   background: #ffffff !important;
 }
 
+/* High contrast text colors for navigation and all text elements */
+[data-contrast='high'] nav,
+[data-contrast='high'] nav *,
+[data-contrast='high'] .text-ice-100,
+[data-contrast='high'] .text-ice-200,
+[data-contrast='high'] .text-ice-300,
+[data-contrast='high'] .text-ice-400,
+[data-contrast='high'] .text-ice-500 {
+  color: #ffffff !important;
+}
+
+[data-contrast='high'] a,
+[data-contrast='high'] button {
+  color: #ffffff !important;
+}
+
+[data-contrast='high'] svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* High contrast for sidebar/aside (Table of Contents) */
+[data-contrast='high'] aside {
+  background: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+[data-contrast='high'] aside h3,
+[data-contrast='high'] aside button,
+[data-contrast='high'] aside li {
+  color: #ffffff !important;
+}
+
+/* High contrast for active/hover states in TOC */
+[data-contrast='high'] .bg-ice-500\/20,
+[data-contrast='high'] .hover\:bg-ice-500\/10:hover,
+[data-contrast='high'] .hover\:bg-ice-900\/20:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-contrast='high'] .border-ice-400 {
+  border-color: #ffffff !important;
+}
+
+[data-contrast='high'] .border-ice-500\/20 {
+  border-color: #ffffff !important;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,

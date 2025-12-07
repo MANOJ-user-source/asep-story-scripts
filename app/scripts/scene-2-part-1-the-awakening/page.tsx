@@ -5,6 +5,7 @@ import Link from 'next/link';
 import TableOfContents from '@/components/TableOfContents';
 import ShareButtons from '@/components/ShareButtons';
 import SceneMetadata from '@/components/SceneMetadata';
+import ScriptNavigation from '@/components/ScriptNavigation';
 
 const tocItems = [
   { id: 'overview', title: 'Scene Overview', level: 1 },
@@ -778,8 +779,11 @@ export default function Scene2Part1() {
                 </SubSection>
               </Section>
 
+              {/* Script Navigation */}
+              <ScriptNavigation currentSlug="scene-2-part-1-the-awakening" />
+
               {/* Footer */}
-              <div className="glass rounded-xl p-6 mt-12 text-center text-ice-400 text-sm">
+              <div className="glass rounded-xl p-6 mt-12 text-center text-ice-400 text-sm max-w-4xl mx-auto">
                 <p>Document Version: 1.0 • Game: ASEP</p>
                 <p>Author: MANOJ TIWARI RAMCHANDRA</p>
                 <p>Last Updated: 02/12/2025</p>

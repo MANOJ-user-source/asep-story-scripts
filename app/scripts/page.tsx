@@ -3,24 +3,7 @@
 import { motion } from 'framer-motion';
 import ScriptCard from '@/components/ScriptCard';
 import { useState } from 'react';
-
-// ASEP Story Scripts
-const allScripts = [
-  {
-    title: 'Level 1 - Scene 1: The Heist',
-    description: 'The MC infiltrates a government building during a city-wide evacuation. A daring escape through collapsing buildings with multiple Quick Time Events leads to an unexpected encounter.',
-    slug: 'level-1-scene-1-the-heist',
-    date: '2025-11-25',
-    tags: ['Level 1', 'Action', 'Cinematic', 'QTE'],
-  },
-  {
-    title: 'Scene 2 - Part 1: The Awakening',
-    description: 'MC regains consciousness in the snow after the attack, discovers a mysterious white suitcase, and rides through the devastated City-1 to reach the shelter in City-A where his family awaits.',
-    slug: 'scene-2-part-1-the-awakening',
-    date: '2025-12-02',
-    tags: ['Scene 2', 'Drama', 'Emotional', 'Cinematic', 'Mystery'],
-  },
-];
+import { allScripts } from '@/data/scripts';
 
 export default function ScriptsPage() {
   const [searchTerm, setSearchTerm] = useState('');

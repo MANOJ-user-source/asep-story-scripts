@@ -3,24 +3,7 @@
 import { motion } from 'framer-motion';
 import ScriptCard from '@/components/ScriptCard';
 import Link from 'next/link';
-
-// ASEP Story Scripts
-const featuredScripts = [
-  {
-    title: 'Level 1 - Scene 1: The Heist',
-    description: 'The MC infiltrates a government building during a city-wide evacuation. A daring escape through collapsing buildings leads to an unexpected encounter.',
-    slug: 'level-1-scene-1-the-heist',
-    date: '2025-11-25',
-    tags: ['Level 1', 'Action', 'Cinematic'],
-  },
-  {
-    title: 'Scene 2 - Part 1: The Awakening',
-    description: 'MC regains consciousness in the snow after the attack, discovers a mysterious white suitcase, and rides through the devastated City-1 to reach the shelter in City-A where his family awaits.',
-    slug: 'scene-2-part-1-the-awakening',
-    date: '2025-12-02',
-    tags: ['Scene 2', 'Drama', 'Emotional', 'Cinematic', 'Mystery'],
-  },
-];
+import { allScripts } from '@/data/scripts';
 
 export default function Home() {
   return (
@@ -86,7 +69,7 @@ export default function Home() {
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredScripts.map((script, index) => (
+            {allScripts.map((script, index) => (
               <ScriptCard key={script.slug} {...script} index={index} />
             ))}
           </div>
@@ -98,8 +81,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { label: 'Story Chapters', value: '2' },
-              { label: 'Total Scenes', value: '2' },
+              { label: 'Story Chapters', value: String(allScripts.length) },
+              { label: 'Total Scenes', value: String(allScripts.length) },
               { label: 'Game Version', value: '1.0' },
             ].map((stat, index) => (
               <motion.div

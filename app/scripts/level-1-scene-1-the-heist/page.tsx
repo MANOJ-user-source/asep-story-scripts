@@ -5,6 +5,7 @@ import Link from 'next/link';
 import TableOfContents from '@/components/TableOfContents';
 import ShareButtons from '@/components/ShareButtons';
 import SceneMetadata from '@/components/SceneMetadata';
+import ScriptNavigation from '@/components/ScriptNavigation';
 
 const tocItems = [
   { id: 'setting', title: 'Setting', level: 1 },
@@ -742,8 +743,11 @@ export default function Level1Scene1() {
                 </InteractionsTable>
               </Section>
 
+              {/* Script Navigation */}
+              <ScriptNavigation currentSlug="level-1-scene-1-the-heist" />
+
               {/* Footer */}
-              <div className="glass rounded-xl p-6 mt-12 text-center text-ice-400 text-sm">
+              <div className="glass rounded-xl p-6 mt-12 text-center text-ice-400 text-sm max-w-4xl mx-auto">
                 <p>Document Version: 1.0 • Game: ASEP</p>
                 <p>Author: MANOJ TIWARI RAMCHANDRA</p>
                 <p>Last Updated: 25/11/2025</p>

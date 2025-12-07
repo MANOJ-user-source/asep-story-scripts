@@ -38,6 +38,7 @@ export default function Navigation() {
             <div className="flex items-center space-x-8">
               <NavLink href="/">Home</NavLink>
               <NavLink href="/scripts">Story Scripts</NavLink>
+              <NavLink href="/characters">Characters</NavLink>
               <NavLink href="/about">About Game</NavLink>
             </div>
             <FontSizeControl />
@@ -86,6 +87,9 @@ export default function Navigation() {
             </MobileNavLink>
             <MobileNavLink href="/scripts" onClick={() => setIsOpen(false)}>
               Story Scripts
+            </MobileNavLink>
+            <MobileNavLink href="/characters" onClick={() => setIsOpen(false)}>
+              Characters
             </MobileNavLink>
             <MobileNavLink href="/about" onClick={() => setIsOpen(false)}>
               About Game

@@ -5,7 +5,6 @@ import Navigation from '@/components/Navigation';
 import SnowEffect from '@/components/SnowEffect';
 import Footer from '@/components/Footer';
 import ReadingProgress from '@/components/ReadingProgress';
-import SettingsFAB from '@/components/SettingsFAB';
 import MotionToggle from '@/components/MotionToggle';
 import MotionAttributeSync from '@/components/MotionAttributeSync';
 import { MotionProvider } from '@/context/MotionContext';
@@ -40,7 +39,6 @@ export default function RootLayout({
           <SnowEffect />
           <ReadingProgress />
           <Navigation />
-          <SettingsFAB />
           <MotionToggle />
           <main className="relative z-10 pt-16 min-h-screen">
             {children}
