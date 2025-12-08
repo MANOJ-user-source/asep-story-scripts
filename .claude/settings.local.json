@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s \"c:\\Users\\manoj\\OneDrive\\Desktop\\ASEP SCRIPT\\game-scripts-blog\")",
+      "Bash(findstr:*)",
+      "Bash(npm run build:*)",
+      "Bash(dir /s /b \"c:\\Users\\manoj\\OneDrive\\Desktop\\ASEP SCRIPT\\game-scripts-blog\\app\\scripts\")",
+      "Bash(npx tsc:*)",
+      "Bash(mkdir:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
+      "Bash(echo:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
