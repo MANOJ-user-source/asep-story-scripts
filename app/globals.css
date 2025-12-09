@@ -277,16 +277,6 @@ aside::-webkit-scrollbar-thumb:hover {
   background: rgba(56, 189, 248, 0.4);
 }
 
-/* Snowfall animation */
-@keyframes snowfall {
-  0% {
-    transform: translateY(-10vh) translateX(0);
-  }
-  100% {
-    transform: translateY(110vh) translateX(100px);
-  }
-}
-
 /* ==========================================
    PRINT STYLESHEET
    Professional print layout for scripts

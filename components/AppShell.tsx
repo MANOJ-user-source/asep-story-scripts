@@ -6,7 +6,6 @@ import { MotionProvider } from '@/context/MotionContext';
 
 // Dynamic imports with ssr: false for framer-motion components
 const Navigation = dynamic(() => import('./Navigation'), { ssr: false });
-const SnowEffect = dynamic(() => import('./SnowEffect'), { ssr: false });
 const Footer = dynamic(() => import('./Footer'), { ssr: false });
 const ReadingProgress = dynamic(() => import('./ReadingProgress'), { ssr: false });
 const MotionToggle = dynamic(() => import('./MotionToggle'), { ssr: false });
@@ -55,7 +54,6 @@ export default function AppShell({ children }: AppShellProps) {
   return (
     <MotionProvider>
       <MotionAttributeSync />
-      <SnowEffect />
       <ReadingProgress />
       <Navigation />
       <MotionToggle />

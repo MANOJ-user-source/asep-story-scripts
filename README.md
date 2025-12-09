@@ -8,7 +8,6 @@ ASEP is an action-adventure game set on the frozen planet of Estra. This website
 
 ## Features
 
-- ❄️ **Animated Snow Effect** - Beautiful falling snow particles matching Estra's frozen aesthetic
 - 📖 **Documentation-Style Layout** - Clean, readable format inspired by modern documentation sites
 - 📑 **Table of Contents** - Sticky sidebar navigation for easy browsing
 - 🎬 **Screenplay Formatting** - Professional story script presentation
@@ -65,7 +64,6 @@ game-scripts-blog/
 │   └── globals.css              # Global styles & theme
 ├── components/                   # React components
 │   ├── Navigation.tsx           # Header navigation
-│   ├── SnowEffect.tsx          # Animated snow particles
 │   ├── ScriptCard.tsx          # Story script preview cards
 │   ├── TableOfContents.tsx     # Sticky TOC sidebar
 │   └── CodeBlock.tsx           # Syntax highlighted code
@@ -136,18 +134,10 @@ colors: {
 }
 ```
 
-### Adjusting Snow Effect
-
-Modify `components/SnowEffect.tsx`:
-- `numberOfFlakes` - Amount of snowflakes (default: 50)
-- `size` range - Snowflake size (default: 2-5px)
-- `animationDuration` - Fall speed (default: 10-20s)
-
 ### Custom Animations
 
 Edit animation keyframes in `tailwind.config.ts`:
 - `float` - Floating motion
-- `snowfall` - Snow falling animation
 - `shimmer` - Shimmer effect
 
 ## Performance Features

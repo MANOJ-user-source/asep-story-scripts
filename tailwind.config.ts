@@ -21,27 +21,15 @@ const config: Config = {
           800: '#075985',
           900: '#0c4a6e',
         },
-        snow: {
-          50: '#ffffff',
-          100: '#fafafa',
-          200: '#f5f5f5',
-          300: '#e5e7eb',
-          400: '#d1d5db',
-        }
       },
       animation: {
         'float': 'float 3s ease-in-out infinite',
-        'snowfall': 'snowfall linear infinite',
         'shimmer': 'shimmer 2s linear infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
-        },
-        snowfall: {
-          '0%': { transform: 'translateY(-10vh) translateX(0)' },
-          '100%': { transform: 'translateY(110vh) translateX(100px)' },
         },
         shimmer: {
           '0%': { backgroundPosition: '-1000px 0' },

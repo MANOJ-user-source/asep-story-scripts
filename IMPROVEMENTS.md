@@ -4,7 +4,6 @@
 
 Great work! Here's what you already have:
 
-- ✅ **Snow Effects** - Beautiful animated falling snow
 - ✅ **Reading Progress Bar** - Shows scroll progress at top
 - ✅ **Share Buttons** - Twitter, Facebook, Reddit, Copy Link
 - ✅ **Scene Metadata** - Word count, read time, version, last updated
@@ -20,7 +19,6 @@ Great work! Here's what you already have:
 - ✅ **Font Size Control** - A/A+/A++ accessibility buttons
 - ✅ **Mobile TOC Drawer** - Slide-out menu with backdrop
 - ✅ **Print Stylesheet** - Professional print layouts for scripts
-- ✅ **Enhanced Snow Effects** - Wind direction, varying sizes (1.5-5.5px), intensity control (light/normal/heavy), toggle on/off
 - ✅ **Smooth Scroll** - Already enabled with CSS scroll-behavior
 - ✅ **Loading Skeletons** - Animated skeleton screens for cards and content
 - ✅ **Enhanced Hover Effects** - 3D transforms, spring animations, glowing borders on cards
@@ -38,7 +36,6 @@ Great work! Here's what you already have:
 #### 🎨 Visual & UX Enhancements
 - [x] **Dark/Light Mode Toggle** - ✅ DONE! Theme switcher in navigation
 - [x] **Font Size Control** - ✅ DONE! A/A+/A++ buttons in navigation
-- [x] **More Snow Effects** - ✅ DONE! Wind, varying sizes, toggle, intensity control (bottom-right)
 - [x] **Smooth Scroll** - ✅ DONE! Already enabled with CSS
 - [x] **Loading Animations** - ✅ DONE! Skeleton screens for cards and content
 - [x] **Better Hover Effects** - ✅ DONE! 3D transforms, spring animations, glow effects
@@ -147,7 +144,6 @@ Great work! Here's what you already have:
 7. **Bookmarks System** - localStorage-based favorites
 8. **Download as PDF** - Use browser's print to PDF
 9. **Keyboard Navigation** - Power user feature
-10. **Better Snow Controls** - Toggle, speed, density
 
 ### Advanced (4+ hours each):
 11. **PWA Support** - Make it installable
